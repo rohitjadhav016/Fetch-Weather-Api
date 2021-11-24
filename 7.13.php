@@ -6,7 +6,7 @@
     if (array_key_exists('city', $_GET)) {
 
         $city = $_GET['city'];
-        $apiData = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=".urlencode($city)."&appid=1957505901190cb54408973e7254feb3");
+        $apiData = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=".urlencode($city)."&appid=");
         $apiDataArr = json_decode($apiData, true);
 
         if(!empty($apiDataArr) && $apiDataArr['cod'] == 200){
